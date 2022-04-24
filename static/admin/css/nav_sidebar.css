@@ -22,7 +22,6 @@
 }
 
 [dir="rtl"] .toggle-nav-sidebar {
-    border-left: 1px solid var(--hairline-color);
     border-right: 0;
 }
 
@@ -43,7 +42,6 @@
 }
 
 [dir="rtl"] #nav-sidebar {
-    border-left: 1px solid var(--hairline-color);
     border-right: 0;
     left: 0;
     margin-left: 0;

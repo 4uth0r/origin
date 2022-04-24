@@ -6,9 +6,9 @@
 
 /* VARIABLE DEFINITIONS */
 :root {
-  --primary: #79aec8;
-  --secondary: #417690;
-  --accent: #f5dd5d;
+  --primary: #008;
+  --secondary: #008080;
+  --accent: #fff;
   --primary-fg: #fff;
 
   --body-fg: #333;
@@ -57,40 +57,6 @@
   --object-tools-hover-bg: var(--close-button-hover-bg);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --primary: #264b5d;
-    --primary-fg: #eee;
-
-    --body-fg: #eeeeee;
-    --body-bg: #121212;
-    --body-quiet-color: #e0e0e0;
-    --body-loud-color: #ffffff;
-
-    --breadcrumbs-link-fg: #e0e0e0;
-    --breadcrumbs-bg: var(--primary);
-
-    --link-fg: #81d4fa;
-    --link-hover-color: #4ac1f7;
-    --link-selected-fg: #6f94c6;
-
-    --hairline-color: #272727;
-    --border-color: #353535;
-
-    --error-fg: #e35f5f;
-    --message-success-bg: #006b1b;
-    --message-warning-bg: #583305;
-    --message-error-bg: #570808;
-
-    --darkened-bg: #212121;
-    --selected-bg: #1b1b1b;
-    --selected-row: #00363a;
-
-    --close-button-bg: #333333;
-    --close-button-hover-bg: #666666;
-  }
-}
-
 html, body {
     height: 100%;
 }
@@ -99,7 +65,7 @@ body {
     margin: 0;
     padding: 0;
     font-size: 14px;
-    font-family: "Roboto","Lucida Grande","DejaVu Sans","Bitstream Vera Sans",Verdana,Arial,sans-serif;
+    font-family: "Vazir";
     color: var(--body-fg);
     background: var(--body-bg);
 }
@@ -231,7 +197,7 @@ blockquote {
 }
 
 code, pre {
-    font-family: "Bitstream Vera Sans Mono", Monaco, "Courier New", Courier, monospace;
+    font-family: "Vazir";
     color: var(--body-quiet-color);
     font-size: 12px;
     overflow-x: auto;
@@ -476,7 +442,7 @@ input, textarea, select, .form-row p, form .button {
     margin: 2px 0;
     padding: 2px 3px;
     vertical-align: middle;
-    font-family: "Roboto", "Lucida Grande", Verdana, Arial, sans-serif;
+    font-family: "Vazir";
     font-weight: normal;
     font-size: 13px;
 }
@@ -588,11 +554,12 @@ input[type=button][disabled].default {
 .module h2, .module caption, .inline-group h2 {
     margin: 0;
     padding: 8px;
-    font-weight: 400;
+    font-weight: bolder;
     font-size: 13px;
     text-align: left;
     background: var(--primary);
     color: var(--header-link-color);
+    border-radius: 5px;
 }
 
 .module caption,
@@ -600,6 +567,7 @@ input[type=button][disabled].default {
     font-size: 12px;
     letter-spacing: 0.5px;
     text-transform: uppercase;
+    border-radius: 5px 5px 0 0;
 }
 
 .module table {
@@ -709,6 +677,9 @@ div.breadcrumbs {
     border: none;
     color: var(--breadcrumbs-fg);
     text-align: left;
+    margin: 20px 20px;
+    border-radius: 5px;
+    box-shadow: 3px 5px 10px lightgrey;
 }
 
 div.breadcrumbs a {
@@ -769,13 +740,13 @@ a.deletelink:focus, a.deletelink:hover {
 }
 
 .object-tools a {
-    border-radius: 15px;
+    border-radius: 5px;
 }
 
 .object-tools a:link, .object-tools a:visited {
     display: block;
     float: left;
-    padding: 3px 12px;
+    padding: 6px 12px;
     background: var(--object-tools-bg);
     color: var(--object-tools-fg);
     font-weight: 400;
@@ -966,6 +937,9 @@ table#change-history tbody th {
 
 #content-related {
     background: var(--darkened-bg);
+    border: 1px solid lightgrey;
+    border-radius: 5px 5px 0 0;
+    box-shadow: 3px 5px 10px lightgrey;
 }
 
 #content-related .module {

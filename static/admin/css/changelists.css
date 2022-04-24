@@ -92,7 +92,7 @@
 #toolbar #searchbar {
     height: 19px;
     border: 1px solid var(--border-color);
-    padding: 2px 5px;
+
     margin: 0;
     vertical-align: top;
     font-size: 13px;
@@ -293,7 +293,7 @@
     border-bottom: none;
     line-height: 24px;
     color: var(--body-quiet-color);
-    width: 100%;
+    /* width: 100%; */
 }
 
 #changelist .actions.selected { /* XXX Probably unused? */
