@@ -559,7 +559,6 @@ input[type=button][disabled].default {
     text-align: left;
     background: var(--primary);
     color: var(--header-link-color);
-    border-radius: 5px;
 }
 
 .module caption,

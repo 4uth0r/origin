@@ -33,6 +33,7 @@
     min-width: 300px;
     margin: 100px auto;
     height: auto;
+    box-shadow: 5px 10px 15px lightgrey;
 }
 
 .login .form-row {
@@ -54,6 +55,10 @@
     padding: 1em 0 0 0;
     margin: 0;
     text-align: center;
+}
+
+.login .submit-row input {
+    width: 100%;
 }
 
 .login .password-reset-link {
