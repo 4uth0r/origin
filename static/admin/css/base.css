@@ -65,7 +65,7 @@ body {
     margin: 0;
     padding: 0;
     font-size: 14px;
-    font-family: "Vazir";
+    font-family: "Vazirmatn";
     color: var(--body-fg);
     background: var(--body-bg);
 }
@@ -197,7 +197,7 @@ blockquote {
 }
 
 code, pre {
-    font-family: "Vazir";
+    font-family: "Vazirmatn";
     color: var(--body-quiet-color);
     font-size: 12px;
     overflow-x: auto;
@@ -442,7 +442,7 @@ input, textarea, select, .form-row p, form .button {
     margin: 2px 0;
     padding: 2px 3px;
     vertical-align: middle;
-    font-family: "Vazir";
+    font-family: "Vazirmatn";
     font-weight: normal;
     font-size: 13px;
 }
