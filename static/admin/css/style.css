@@ -1,0 +1,69 @@
+/* Django Jalali */
+img.ui-datepicker-trigger {
+	height: 15px;
+	margin-left: 10px;
+	cursor: pointer;
+}
+
+.pt-10 {
+    padding-top: 10px;
+}
+
+.ml-5 {
+    margin-left: 5px;
+}
+
+/* Navbar DropDown */
+.dropdown {
+    direction: ltr;
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    margin: 0;
+    padding: 14px 16px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: white;
+    background-color: inherit;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    direction: rtl;
+    display: none;
+    position: absolute;
+    min-width: 220px;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    background-color: rgb(0, 128, 128);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    display: block;
+    padding: 12px 16px;
+    font-size: 13px;
+    text-align: right;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.dropdown-content a:hover {
+    font-weight: bolder;
+    color: white !important;
+    background-color: rgb(0, 128, 128) !important;
+}
+
+.dropdown-content p {
+    text-align: center;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}

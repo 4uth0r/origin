@@ -48,30 +48,131 @@ data-admin-utc-offset="{% now "Z" %}">
       {% block usertools %}
         {% if has_permission %}
           <div id="user-tools">
-            {% block welcome-msg %}
-              <strong>{% firstof user.get_short_name user.get_username %}</strong>
-              {% translate 'Welcome,' %}
-            {% endblock %}
+            <!-- Profile -->
+            <div class="dropdown">
+              <button class="dropbtn"> 
+                <i class="fa-solid fa-user"></i>
+              </button>
 
-            {% block userlinks %}
-              {% if site_url %}
-              <a href="{{ site_url }}">{% translate 'View site' %}</a> /
-              {% endif %}
+              <div class="dropdown-content">
+                <a href="javascript:;">
+                  <p>
+                    <i class="fa-solid fa-user fa-5x"></i>
+                  </p>
+                  
+                  {% block welcome-msg %}
+                    <p class="pt-10">{{ user.get_username }}</p>
+                    <p>{{ user.get_full_name }}</p>
+                  {% endblock %}
+                </a>
 
-              {% if user.is_active and user.is_staff %}
-                {% url 'django-admindocs-docroot' as docsroot %}
+                  {% block userlinks %}
+                    {% if site_url %}
+                      <a href="{{ site_url }}">
+                        <i class="fa-solid fa-globe ml-5"></i>
+                        {% translate 'View site' %} 
+                      </a>
+                    {% endif %}
 
-                {% if docsroot %}
-                  <a href="{{ docsroot }}">{% translate 'Documentation' %}</a> /
-                {% endif %}
-              {% endif %}
+                    {% if user.is_active and user.is_staff %}
+                      {% url 'django-admindocs-docroot' as docsroot %}
+                      {% if docsroot %}
+                        <i class="fa-solid fa-book ml-5"></i>
+                        <a href="{{ docsroot }}">{% translate 'Documentation' %}</a>
+                      {% endif %}
+                    {% endif %}
 
-              {% if user.has_usable_password %}
-                <a href="{% url 'admin:password_change' %}">{% translate 'Change password' %}</a> /
-              {% endif %}
+                    {% if user.has_usable_password %}
+                      <a href="{% url 'admin:password_change' %}">
+                        <i class="fa-solid fa-lock ml-5"></i>
+                        {% translate 'Change password' %}
+                      </a>
+                    {% endif %}
 
-              <a href="{% url 'admin:logout' %}">{% translate 'Log out' %}</a>
-            {% endblock %}
+                    <a href="{% url 'admin:logout' %}">
+                      <i class="fa-solid fa-right-from-bracket ml-5"></i>
+                      {% translate 'Log out' %}
+                    </a>
+                  {% endblock %}
+              </div>
+            </div>
+            <!-- ./Profile -->
+
+            <!-- Notification -->
+            <div class="dropdown">
+              <button class="dropbtn"> 
+                <i class="fa-solid fa-bell fa-shake" style="--fa-animation-duration: 3s;"></i>
+              </button>
+
+              <div class="dropdown-content">
+                <a href="javascript:;">
+                  <p>
+                    <i class="fa-solid fa-calendar-check fa-5x"></i>
+                  </p>
+                  <p class="pt-10">زمان باقی مانده ۳۰ روز</p>
+                </a>
+                
+                <a href="javascript:;">
+                  <i class="fa-solid fa-handcuffs ml-5"></i>
+                  <span>محکوم به حبس: </span>
+                  <span>5</span>
+                  <span>نفر</span>
+                </a>
+
+                <a href="javascript:;"> 
+                  <i class="fa-solid fa-sack-dollar ml-5"></i>
+                  <span>پایان جنبه عمومی: </span>
+                  <span>7</span>
+                  <span>نفر</span>
+                </a>
+              </div>
+            </div>
+            <!-- ./Notification -->
+            
+            <!-- Report -->
+            <div class="dropdown">
+              <button class="dropbtn"> 
+                <i class="fa-solid fa-chart-pie"></i>
+              </button>
+
+              <div class="dropdown-content">
+                <a href="javascript:;">
+                  <p>
+                    <i class="fa-solid fa-chart-pie fa-5x"></i>
+                  </p>
+                  <p class="pt-10">خلاصه وضعیت پرونده‌ها</p>
+                </a>
+
+                <a href="javascript:;"> 
+                  <i class="fa-solid fa-sack-dollar ml-5"></i>
+                  <span>محکوم رد مال: </span>
+                  <span>3</span>
+                  <span>پرونده</span>
+                </a>
+
+                <a href="javascript:;"> 
+                  <i class="fa-solid fa-person-running ml-5"></i>
+                  <span>محکوم متواری: </span>
+                  <span>7</span>
+                  <span>پرونده</span>
+                </a>
+
+                <a href="javascript:;">
+                  <i class="fa-solid fa-handcuffs ml-5"></i>
+                  <span>محکوم به حبس: </span>
+                  <span>5</span>
+                  <span>پرونده</span>
+                </a>
+
+                <a href="javascript:;"> 
+                  <i class="fa-solid fa-book ml-5"></i>
+                  <span>پرونده ثبت شده: </span>
+                  <span>30</span>
+                  <span>پرونده</span>
+                </a>
+              </div>
+            </div>
+            <!-- ./Report -->
           </div>
         {% endif %}
       {% endblock %}
