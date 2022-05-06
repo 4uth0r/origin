@@ -181,14 +181,6 @@ data-admin-utc-offset="{% now "Z" %}">
     </div>
     {% endblock %}
     <!-- END Header -->
-
-    <!-- Breadcrumbs -->
-    {% block breadcrumbs %}
-    <div class="breadcrumbs">
-      <a href="{% url 'admin:index' %}">{% translate 'Home' %}</a>
-      {% if title %} &rsaquo; {{ title }}{% endif %}
-    </div>
-    {% endblock %}
   {% endif %}
   
   <!-- Main -->
@@ -200,6 +192,14 @@ data-admin-utc-offset="{% now "Z" %}">
     {% endif %}
 
     <div class="content">
+      <!-- Breadcrumb -->
+      {% block breadcrumbs %}
+      <div class="breadcrumbs">
+        <a href="{% url 'admin:index' %}">{% translate 'Home' %}</a>
+        {% if title %} &rsaquo; {{ title }}{% endif %}
+      </div>
+      {% endblock %}
+      <!-- ./Breadcrumb -->
       {% block messages %}
         {% if messages %}
         <ul class="messagelist">
@@ -211,7 +211,7 @@ data-admin-utc-offset="{% now "Z" %}">
       {% endblock messages %}
 
         <!-- Content -->
-        <div id="content" class="{% block coltype %}colM{% endblock %}">
+        <div id="content" class="{% if user.get_username %}dash{% endif %} {% block coltype %}colM{% endblock %}">
           {% block pretitle %}{% endblock %}
 
           {% block content_title %}

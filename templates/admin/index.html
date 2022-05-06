@@ -18,16 +18,18 @@
 </div>
 {% endblock %}
 
-{% block nav-sidebar %}{% endblock %}
+{% block nav-sidebar %}
+    {% include "admin/nav_sidebar.html" %}
+{% endblock %}
 
 {% block content %}
-<div id="content-main">
+<!-- <div id="content-main">
     {% include "admin/app_list.html" with app_list=app_list show_changelinks=True %}
-</div>
+</div> -->
 {% endblock %}
 
 {% block sidebar %}
-<div id="content-related">
+<!-- <div id="content-related">
     <div class="module" id="recent-actions-module">
         <h2>{% translate 'Recent actions' %}</h2>
         <h3>{% translate 'My actions' %}</h3>
@@ -55,5 +57,5 @@
         </ul>
         {% endif %}
     </div>
-</div>
+</div> -->
 {% endblock %}

@@ -1,60 +1,60 @@
 /*
-    DJANGO Admin styles
+DJANGO Admin styles
 */
 
 @import url(fonts.css);
 
 /* VARIABLE DEFINITIONS */
 :root {
-  --primary: #008;
-  --secondary: #008080;
-  --accent: #fff;
-  --primary-fg: #fff;
-
-  --body-fg: #333;
-  --body-bg: #fff;
-  --body-quiet-color: #666;
-  --body-loud-color: #000;
-
-  --header-color: #ffc;
-  --header-branding-color: var(--accent);
-  --header-bg: var(--secondary);
-  --header-link-color: var(--primary-fg);
-
-  --breadcrumbs-fg: #c4dce8;
-  --breadcrumbs-link-fg: var(--body-bg);
-  --breadcrumbs-bg: var(--primary);
-
-  --link-fg: #447e9b;
-  --link-hover-color: #036;
-  --link-selected-fg: #5b80b2;
-
-  --hairline-color: #e8e8e8;
-  --border-color: #ccc;
-
-  --error-fg: #ba2121;
-
-  --message-success-bg: #dfd;
-  --message-warning-bg: #ffc;
-  --message-error-bg: #ffefef;
-
-  --darkened-bg: #f8f8f8; /* A bit darker than --body-bg */
-  --selected-bg: #e4e4e4; /* E.g. selected table cells */
-  --selected-row: #ffc;
-
-  --button-fg: #fff;
-  --button-bg: var(--primary);
-  --button-hover-bg: #609ab6;
-  --default-button-bg: var(--secondary);
-  --default-button-hover-bg: #205067;
-  --close-button-bg: #888; /* Previously #bbb, contrast 1.92 */
-  --close-button-hover-bg: #747474;
-  --delete-button-bg: #ba2121;
-  --delete-button-hover-bg: #a41515;
-
-  --object-tools-fg: var(--button-fg);
-  --object-tools-bg: var(--close-button-bg);
-  --object-tools-hover-bg: var(--close-button-hover-bg);
+    --primary: #008;
+    --secondary: #008080;
+    --accent: #fff;
+    --primary-fg: #fff;
+    
+    --body-fg: #333;
+    --body-bg: #fff;
+    --body-quiet-color: #666;
+    --body-loud-color: #000;
+    
+    --header-color: #ffc;
+    --header-branding-color: var(--accent);
+    --header-bg: var(--secondary);
+    --header-link-color: var(--primary-fg);
+    
+    --breadcrumbs-fg: #c4dce8;
+    --breadcrumbs-link-fg: var(--body-bg);
+    --breadcrumbs-bg: var(--primary);
+    
+    --link-fg: #447e9b;
+    --link-hover-color: #036;
+    --link-selected-fg: #5b80b2;
+    
+    --hairline-color: #e8e8e8;
+    --border-color: #ccc;
+    
+    --error-fg: #ba2121;
+    
+    --message-success-bg: #dfd;
+    --message-warning-bg: #ffc;
+    --message-error-bg: #ffefef;
+    
+    --darkened-bg: #f8f8f8; /* A bit darker than --body-bg */
+    --selected-bg: #e4e4e4; /* E.g. selected table cells */
+    --selected-row: #ffc;
+    
+    --button-fg: #fff;
+    --button-bg: var(--primary);
+    --button-hover-bg: #609ab6;
+    --default-button-bg: var(--secondary);
+    --default-button-hover-bg: #205067;
+    --close-button-bg: #888; /* Previously #bbb, contrast 1.92 */
+    --close-button-hover-bg: #747474;
+    --delete-button-bg: #ba2121;
+    --delete-button-hover-bg: #a41515;
+    
+    --object-tools-fg: var(--button-fg);
+    --object-tools-bg: var(--close-button-bg);
+    --object-tools-hover-bg: var(--close-button-hover-bg);
 }
 
 html, body {
@@ -241,7 +241,7 @@ hr {
 }
 
 div.help ul {
-     margin-bottom: 0;
+    margin-bottom: 0;
 }
 
 .help-tooltip {
@@ -671,22 +671,19 @@ td ul.errorlist + input, td ul.errorlist + select, td ul.errorlist + textarea {
 /* BREADCRUMBS */
 
 div.breadcrumbs {
-    background: var(--breadcrumbs-bg);
-    padding: 10px 40px;
+    margin: 20px 22px;
+    padding: 8px 40px;
     border: none;
-    color: var(--breadcrumbs-fg);
+    color: grey;
     text-align: left;
-    margin: 20px 22px 0 22px;
-    border-radius: 5px;
-    box-shadow: 3px 5px 10px lightgrey;
 }
 
 div.breadcrumbs a {
-    color: var(--breadcrumbs-link-fg);
+    color: rgba(0, 0, 0, 0.8);
 }
 
 div.breadcrumbs a:focus, div.breadcrumbs a:hover {
-    color: var(--breadcrumbs-fg);
+    color: rgb(0, 0, 0);
 }
 
 /* ACTION ICONS */
@@ -813,12 +810,19 @@ table#change-history tbody th {
 }
 
 #content {
-    padding: 20px 40px;
+    padding: 20px 20px;
 }
 
-.dashboard #content {
-    width: 600px;
+.dash {
+    margin: 0 40px;
+    border: 1px solid rgba(211, 211, 211, 0.5);
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(211, 211, 211, 0.5);
 }
+
+/* .dashboard #content {
+    width: 600px;
+} */
 
 #content-main {
     float: left;

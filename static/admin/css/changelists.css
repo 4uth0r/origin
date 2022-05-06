@@ -234,7 +234,7 @@
     line-height: 22px;
     margin: 0;
     border-top: 1px solid var(--hairline-color);
-    width: 100%;
+    /* width: 100%; */
 }
 
 .paginator a:link, .paginator a:visited {

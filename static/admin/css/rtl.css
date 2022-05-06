@@ -58,8 +58,8 @@ div.breadcrumbs {
 }
 
 .colMS {
-    margin-left: 300px;
-    margin-right: 0;
+    /* margin-left: 300px; */
+    margin-right: 40px;
 }
 
 /* SORTABLE TABLES */
