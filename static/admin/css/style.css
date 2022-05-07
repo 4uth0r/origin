@@ -1,4 +1,4 @@
-/* Django Jalali */
+/* Django Jalali icon */
 img.ui-datepicker-trigger {
 	height: 15px;
 	margin-left: 10px;
@@ -43,21 +43,19 @@ img.ui-datepicker-trigger {
     z-index: 1;
 }
 
-.dropdown-content a {
+.dropdown-content div {
     float: none;
     display: block;
     padding: 12px 16px;
     font-size: 13px;
     text-align: right;
-    color: black;
     text-decoration: none;
     font-weight: bold;
+    border-top: 1px solid rgba(211, 211, 211, 0.5);
 }
 
 .dropdown-content a:hover {
-    font-weight: bolder;
     color: white !important;
-    background-color: rgb(0, 128, 128) !important;
 }
 
 .dropdown-content p {

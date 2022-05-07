@@ -926,9 +926,9 @@ table#change-history tbody th {
     text-align: right;
 }
 
-#user-tools a {
+/* #user-tools a {
     border-bottom: 1px solid rgba(255, 255, 255, 0.25);
-}
+} */
 
 #user-tools a:focus, #user-tools a:hover {
     text-decoration: none;
