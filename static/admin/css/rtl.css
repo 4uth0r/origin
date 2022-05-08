@@ -6,7 +6,7 @@ th {
 
 .module h2, .module caption {
     text-align: center;
-    border-radius: 5px;
+    border-radius: 0;
 }
 
 .module ul, .module ol {
